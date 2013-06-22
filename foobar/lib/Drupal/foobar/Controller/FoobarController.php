@@ -6,6 +6,7 @@
 
 namespace Drupal\foobar\Controller;
 
+use Drupal\foobar\Form\FoobarForm;
 use Drupal\Core\ControllerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -40,15 +41,27 @@ class FoobarController implements ControllerInterface {
   }
 
   /**
-   * Prints a page listing a glossary of Drupal terminology.
+   * An example of a 
    *
-   * @return string
-   *   An HTML string representing the contents of the foobar page.
+   * @return array
+   *   A string or render array to be processed by the rendering engine.
    */
   public function foobarPage() {
 		return array(
 			'#markup' => t('This is the demo foobar page.'),
 		);
+  }
+  
+  /**
+   * An example of how to embed a form on a page using drupal_get_form().
+   * 
+   * @return array
+   *   A form array to be processed by the rendering engine.
+   */
+  public function foobarDrupalGetFormPage() {
+    // It's important to note that we're aliasing the embedded forms
+    // namespace "Drupal\foobar\Form\FoobarForm" within this controller.
+    return drupal_get_form(new FoobarForm());
   }
 
 }
