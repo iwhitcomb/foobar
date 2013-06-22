@@ -11,5 +11,15 @@ function foobar_menu() {
 		// This is the name of the route from foobar.routing.yml
 		'route_name' => 'foobar',
 	);
+  $items['admin/foobar/systemconfigformbase'] = array(
+		'title' => 'SystemConfigFormBase Example',
+		'description' => 'An example of a basic system configuration form using the SystemConfigFormBase class.',
+		'route_name' => 'foobar.systemconfigformbase',
+	);
+  $items['foobar/form'] = array(
+		'title' => 'Form Example',
+		'description' => 'An example of a basic form.',
+		'route_name' => 'foobar.form',
+	);
   return $items;
 }

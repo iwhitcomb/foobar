@@ -4,3 +4,15 @@ foobar:
     _content: '\Drupal\foobar\Controller\FoobarController::foobarPage'
   requirements:
     _permission: 'access administration pages'
+foobar.form:
+  pattern: 'foobar/form'
+  defaults:
+    _form: '\Drupal\foobar\Form\FoobarForm'
+  requirements:
+    _permission: 'access administration pages'
+foobar.systemconfigformbase:
+  pattern: 'admin/foobar/systemconfigformbase'
+  defaults:
+    _form: '\Drupal\foobar\Form\FoobarConfigForm'
+  requirements:
+    _permission: 'access administration pages'
