@@ -1,0 +1,6 @@
+foobar:
+  pattern: 'admin/foobar'
+  defaults:
+    _content: '\Drupal\foobar\Controller\FoobarController::foobarPage'
+  requirements:
+    _permission: 'access administration pages'

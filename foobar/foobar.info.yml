@@ -1,0 +1,10 @@
+name: Foobar
+type: module
+description: 'This is a demo for creating Drupal 8 modules.'
+package: Custom
+version: 8.x-1.0
+core: 8.x
+dependencies:
+  - node
+  - block
+hidden: false
