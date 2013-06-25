@@ -16,7 +16,7 @@ class FoobarForm implements FormInterface {
   public function getFormID() {
     return 'foobar_form';
   }
-  
+
   /**
    * Implements \Drupal\Core\Form\FormInterface::buildForm().
    */

@@ -9,7 +9,7 @@ namespace Drupal\foobar\Form;
 use Drupal\system\SystemConfigFormBase;
 
 class FoobarConfigForm extends SystemConfigFormBase {
-  
+
   /**
    * Implements \Drupal\Core\Form\FormInterface::getFormID().
    */
@@ -30,14 +30,14 @@ class FoobarConfigForm extends SystemConfigFormBase {
     );
     return $form;
   }
-  
+
   /**
    * Implements \Drupal\Core\Form\FormInterface::validateForm().
    */
   public function validateForm(array &$form, array &$form_state) {
     parent::validateForm($form, $form_state);
   }
-  
+
   /**
    * Implements \Drupal\Core\Form\FormInterface::submitForm().
    */

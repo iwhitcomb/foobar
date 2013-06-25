@@ -41,20 +41,20 @@ class FoobarController implements ControllerInterface {
   }
 
   /**
-   * An example of a 
+   * An example of a
    *
    * @return array
    *   A string or render array to be processed by the rendering engine.
    */
   public function foobarPage() {
-		return array(
-			'#markup' => t('This is the demo foobar page.'),
-		);
+    return array(
+      '#markup' => t('This is the demo foobar page.'),
+    );
   }
-  
+
   /**
    * An example of how to embed a form on a page using drupal_get_form().
-   * 
+   *
    * @return array
    *   A form array to be processed by the rendering engine.
    */
