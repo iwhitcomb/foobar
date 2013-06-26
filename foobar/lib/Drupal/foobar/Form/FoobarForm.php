@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Contains \Drupal\foobar\Form\FoobarForm.
@@ -8,17 +9,20 @@ namespace Drupal\foobar\Form;
 
 use Drupal\Core\Form\FormInterface;
 
+/**
+ * @todo.
+ */
 class FoobarForm implements FormInterface {
 
   /**
-   * Implements \Drupal\Core\Form\FormInterface::getFormID().
+   * {@inheritdoc}
    */
   public function getFormID() {
     return 'foobar_form';
   }
-  
+
   /**
-   * Implements \Drupal\Core\Form\FormInterface::buildForm().
+   * {@inheritdoc}
    */
   public function buildForm(array $form, array &$form_state) {
     $form['foo'] = array(
@@ -47,7 +51,7 @@ class FoobarForm implements FormInterface {
   }
 
   /**
-   * Implements \Drupal\Core\Form\FormInterface::validateForm().
+   * {@inheritdoc}
    */
   public function validateForm(array &$form, array &$form_state) {
     if ($form_state['values']['foo'] != 'bar') {
@@ -56,7 +60,7 @@ class FoobarForm implements FormInterface {
   }
 
   /**
-   * Implements \Drupal\Core\Form\FormInterface::submitForm().
+   * {@inheritdoc}
    */
   public function submitForm(array &$form, array &$form_state) {
     if ($form_state['values']['op'] == t('Save')) {

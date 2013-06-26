@@ -1,32 +1,30 @@
 <?php
 
 /**
+ * @file
+ * Provides hook implementations for the foobar module.
+ */
+
+/**
  * Implements hook_menu().
  */
 function foobar_menu() {
-	/**
-   * In general the path doesn't really matter here when using route_name since
-   * the real path is already registered in foobar.routing.yml.
-   */
-	$items['admin/foobar'] = array(
-		'title' => 'Foobar',
-		'description' => 'This is the demo foobar page.',
-		'route_name' => 'foobar', // The name of the route from foobar.routing.yml
-	);
+  // The paths given here need to match the ones in foobar.routing.yml exactly.
+  $items['admin/foobar'] = array(
+    'title' => 'Foobar',
+    'description' => 'This is the demo foobar page.',
+    // The name of the route from foobar.routing.yml
+    'route_name' => 'foobar',
+  );
   $items['admin/foobar/form'] = array(
-		'title' => 'Form Example',
-		'description' => 'An example of a basic form.',
-		'route_name' => 'foobar.form',
-	);
-  $items['admin/foobar/drupal_get_form'] = array(
-		'title' => 'drupal_get_form() Example',
-		'description' => 'An example of a basic form called using drupal_get_form().',
-		'route_name' => 'foobar.drupal_get_form',
-	);
+    'title' => 'Form Example',
+    'description' => 'An example of a basic form.',
+    'route_name' => 'foobar.form',
+  );
   $items['admin/foobar/systemconfigformbase'] = array(
-		'title' => 'SystemConfigFormBase Example',
-		'description' => 'An example of a basic system configuration form using the SystemConfigFormBase class.',
-		'route_name' => 'foobar.systemconfigformbase',
-	);
+    'title' => 'SystemConfigFormBase Example',
+    'description' => 'An example of a basic system configuration form using the SystemConfigFormBase class.',
+    'route_name' => 'foobar.systemconfigformbase',
+  );
   return $items;
 }
