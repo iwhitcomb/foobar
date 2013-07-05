@@ -5,6 +5,8 @@
  * Provides hook implementations for the foobar module.
  */
 
+use Drupal\foobar\Plugin\Block\FoobarBlock;
+
 /**
  * Implements hook_menu().
  */

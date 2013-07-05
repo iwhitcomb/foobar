@@ -8,3 +8,4 @@ dependencies:
   - node
   - block
 hidden: false
+configure: admin/foobar
