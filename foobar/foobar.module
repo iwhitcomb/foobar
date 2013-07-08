@@ -30,3 +30,43 @@ function foobar_menu() {
   );
   return $items;
 }
+
+/**
+ * Implements hook_field_info().
+ */
+function foobar_field_info() {
+  return array(
+    'foobar' => array(
+      'label' => t('Foobar'),
+      'description' => t('This field stores foobar information in the database.'),
+      'default_widget' => 'foobar_default',
+      'default_formatter' => 'foobar',
+      'field item class' => 'Drupal\foobar\Type\FoobarItem',
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_info_alter().
+ */
+function foobar_field_info_alter(&$info) {
+  if (module_exists('text')) {
+    $info['foobar']['default_formatter'] = 'text_plain';
+  }
+}
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function foobar_field_is_empty($item, $field) {
+  return !isset($item['value']) || $item['value'] === '';
+}
+
+/**
+ * Implements hook_field_formatter_info_alter().
+ */
+function foobar_field_formatter_info_alter(&$info) {
+  if (isset($info['text_plain'])) {
+    $info['text_plain']['field_types'][] = 'text_plain';
+  }
+}

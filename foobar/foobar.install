@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Foobar module.
+ */
+
+/**
+ * Implements hook_field_schema().
+ */
+function foobar_field_schema($field) {
+  $columns = array(
+    'value' => array(
+      'type' => 'varchar',
+      'length' => 254,
+      'not null' => FALSE,
+    ),
+  );
+  return array(
+    'columns' => $columns,
+  );
+}

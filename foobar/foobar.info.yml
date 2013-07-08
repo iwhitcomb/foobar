@@ -5,7 +5,7 @@ package: Custom
 version: 8.x-1.0
 core: 8.x
 dependencies:
-  - node
   - block
+  - field
 hidden: false
 configure: admin/foobar
