@@ -5,8 +5,6 @@
  * Provides hook implementations for the foobar module.
  */
 
-use Drupal\foobar\Plugin\Block\FoobarBlock;
-
 /**
  * Implements hook_menu().
  */
@@ -27,6 +25,11 @@ function foobar_menu() {
     'title' => 'SystemConfigFormBase Example',
     'description' => 'An example of a basic system configuration form using the SystemConfigFormBase class.',
     'route_name' => 'foobar.systemconfigformbase',
+  );
+  $items['admin/foobar/drupal_get_form'] = array(
+    'title' => 'drupal_get_form() Example',
+    'description' => 'An example of a form using the drupal_get_form().',
+    'route_name' => 'foobar.drupal_get_form',
   );
   return $items;
 }

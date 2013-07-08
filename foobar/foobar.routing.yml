@@ -18,3 +18,10 @@ foobar.systemconfigformbase:
     _form: '\Drupal\foobar\Form\FoobarConfigForm'
   requirements:
     _permission: 'access administration pages'
+
+foobar.drupal_get_form:
+  pattern: 'admin/foobar/drupal_get_form'
+  defaults:
+    _content: '\Drupal\foobar\Controller\FoobarController::foobarDrupalGetFormPage'
+  requirements:
+    _permission: 'access administration pages'
