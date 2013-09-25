@@ -8,13 +8,13 @@
 namespace Drupal\foobar\Plugin\Block;
 
 use Drupal\block\BlockBase;
-use Drupal\Component\Annotation\Plugin;
+use Drupal\block\Annotation\Block;
 use Drupal\Core\Annotation\Translation;
 
 /**
  * Provides a 'Foobar' block.
  *
- * @Plugin(
+ * @Block(
  *   id = "foobar_foobar_block",
  *   admin_label = @Translation("Foobar"),
  *   module = "foobar"
