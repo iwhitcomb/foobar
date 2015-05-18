@@ -7,14 +7,14 @@
 namespace Drupal\foobar\Controller;
 
 use Drupal\foobar\Form\FoobarForm;
-use Drupal\Core\Controller\ControllerInterface;
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Controller routines for foobar routes.
  */
-class FoobarController implements ControllerInterface {
+class FoobarController implements ContainerInjectionInterface {
 
   /**
    * Stores the module handler.
